@@ -38,7 +38,6 @@ public class JdbcIngredientRepository implements IngredientRepository {
         return results.size() == 0 ?
                 Optional.empty() :
                 Optional.of(results.get(0));
-        )
     }
 
     private Ingredient mapRowToIngredient(ResultSet row, int rowNum) throws SQLException {
@@ -56,6 +55,5 @@ public class JdbcIngredientRepository implements IngredientRepository {
                 ingredient.getName(),
                 ingredient.getType().toString());
         return ingredient;
-        )
     }
 }
